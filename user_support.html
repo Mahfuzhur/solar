@@ -31,7 +31,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="dashboard.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>Dashboard</span></a>
+                        <a href="#" class="logo">Dashboard</a>
                         <!-- Image Logo here -->
                         <!--<a href="index.html" class="logo">-->
                         <!--<i class="icon-c-logo"> <img src="assets/images/logo_sm.png" height="42"/> </i>-->
@@ -44,6 +44,8 @@
                 <nav class="navbar-custom">
 
                     <ul class="list-inline float-right mb-0">
+                       
+
                         
 
                         <li class="list-inline-item dropdown notification-list">
@@ -54,7 +56,7 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
-                                    <h5 class="text-overflow"><small>Welcome ! Admin</small> </h5>
+                                    <h5 class="text-overflow"><small>Welcome ! User</small> </h5>
                                 </div>
 
                                 <!-- item-->
@@ -88,7 +90,7 @@
                                 <i class="dripicons-menu"></i>
                             </button>
                         </li>
-                       <!--  <li class="hide-phone app-search">
+                        <!-- <li class="hide-phone app-search">
                             <form role="search" class="">
                                 <input type="text" placeholder="Search..." class="form-control">
                                 <a href=""><i class="fa fa-search"></i></a>
@@ -113,24 +115,11 @@
                             <li class="text-muted menu-title">Menu</li>
 
                             <li class="has_sub">
-                                <a href="dashboard.html" class="waves-effect"><i class="ti-home"></i> <span> Dashboard </span></a>
+                                <a href="user_dashboard.html" class="waves-effect"><i class="ti-home"></i> <span> Dashboard </span></a>
                             </li>
                             <li class="has_sub">
-                                <a href="client_list.html" class="waves-effect"><i class="ti-user"></i> <span> Client List </span></a>
+                                <a href="user_support.html" class="waves-effect"><i class="ti-home"></i> <span> Support </span></a>
                             </li>
-                            <li class="has_sub">
-                                <a href="manage_user.html" class="waves-effect"><i class="ti-home"></i> <span> Manage User </span></a>
-                            </li>
-                            <li class="has_sub">
-                                <a href="register.html" class="waves-effect"><i class="ti-home"></i> <span> Register </span></a>
-                            </li>
-                            <li class="has_sub">
-                                <a href="node.html" class="waves-effect"><i class="ti-user"></i> <span> Node </span></a>
-                            </li>
-                            <li class="has_sub">
-                                <a href="admin_support.html" class="waves-effect"><i class="ti-user"></i> <span> Support </span></a>
-                            </li>
-
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -162,110 +151,37 @@
                                             <div class="p-20">
                                                 <form class="form-horizontal" role="form">
                                                     <div class="form-group row">
-                                                        <label class="col-2 col-form-label">User Name</label>
+                                                        <label class="col-2 col-form-label">Name</label>
+                                                        <div class="col-10">
+                                                            <input type="text" class="form-control" value="Name">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-2 col-form-label">Phone</label>
+                                                        <div class="col-10">
+                                                            <input type="text" class="form-control" value="Phone Number">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-2 col-form-label">Address</label>
+                                                        <div class="col-10">
+                                                            <input type="text" class="form-control" value="Address">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-2 col-form-label">Message</label>
                                                         <div class="col-10">
                                                             <input type="text" class="form-control" value="Some text value...">
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Password</label>
-                                                        <div class="col-10">
-                                                            <input type="password" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
+                                                     <div style="margin-left: 94%">
+                                                        <button  type="submit" class="btn btn-success">Save</button>
+                                                     </div>
 
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Confirm Password</label>
-                                                        <div class="col-10">
-                                                            <input type="password" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Authentication code</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Email</label>
-                                                        <div class="col-10">
-                                                            <input type="email" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Re-enter Email</label>
-                                                        <div class="col-10">
-                                                            <input type="email" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Organization/University</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Street</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">City</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Street</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">City</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">State</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Zip</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Country</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label class="col-2 col-form-label">Mobile</label>
-                                                        <div class="col-10">
-                                                            <input type="text" class="form-control" value="Some text value...">
-                                                        </div>
-                                                    </div>
-                                                    <button type="submit" class="btn btn-success">Submit</button>
 
                                                 </form>
                                             </div>
@@ -283,7 +199,7 @@
                 </div> <!-- content -->
 
                 <footer class="footer text-right">
-                    &copy; 2016 - 2018. All rights reserved.
+                    &copy; 2019. All rights reserved.
                 </footer>
 
             </div>
