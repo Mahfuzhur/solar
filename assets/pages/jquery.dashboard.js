@@ -66,7 +66,7 @@
                 { y: '2014', a: 75,  b: 65, c: 90 },
                 { y: '2015', a: 100, b: 90, c: 130 }
             ];
-            this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b', 'c'], ['Desktops', 'Tablets', 'Mobiles'], ['#7e57c2', '#b39ddb', '#ede7f6']);
+            this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b', 'c'], ['Current', 'Voltage', 'Power'], ['#7e57c2', '#b39ddb', '#ede7f6']);
 
             //create line chart
             var $data  = [

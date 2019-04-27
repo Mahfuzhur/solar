@@ -8,11 +8,15 @@
 
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-        <title>Manage User</title>
+        <title>User List</title>
 
-        <!-- Plugin Css-->
-        <link rel="stylesheet" href="plugins/magnific-popup/css/magnific-popup.css" />
-        <link rel="stylesheet" href="plugins/jquery-datatables-editable/dataTables.bootstrap4.min.css" />
+        <!-- DataTables -->
+        <link href="plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Multi Item Selection examples -->
+        <link href="plugins/datatables/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
@@ -35,7 +39,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="dashboard.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>Dashboard</span></a>
+                        <a href="dashboard.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>ISMS</span></a>
                         <!-- Image Logo here -->
                         <!--<a href="index.html" class="logo">-->
                         <!--<i class="icon-c-logo"> <img src="assets/images/logo_sm.png" height="42"/> </i>-->
@@ -49,6 +53,7 @@
 
                     <ul class="list-inline float-right mb-0">
                         
+
                         <li class="list-inline-item dropdown notification-list">
                             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="false" aria-expanded="false">
@@ -152,183 +157,123 @@
                     <div class="container-fluid">
 
                         <!-- Page-Title -->
-                       <div class="row">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title">User List</h4>
+                                    
 
-                            <div class="col-sm-12">
-
-                                <div class="card-box">
-                                    <h4 class="m-t-0 header-title">Manage User</h4>
-                                    <!-- <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="m-b-30">
-                                                <button id="addToTable" class="btn btn-success waves-effect waves-light">Add <i class="mdi mdi-plus-circle-outline"></i></button>
-                                            </div>
-                                        </div>
-                                    </div> -->
-
-                                    <table class="table table-striped add-edit-table" id="datatable-editable">
+                                    <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                         <tr>
-                                            <th>Client Name</th>
-                                            <th>Email</th>
-                                            <th>Address</th>
-                                            <th>System Capacity</th>
-                                            <th>Production</th>
-                                            <th>Actions</th>
+                                            <th>Name</th>
+                                            <th>Battery Capacity</th>
+                                            <th>Battery Voltage</th>
+                                            <th>Solar Panel Power</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
                                         </tr>
                                         </thead>
+
+
                                         <tbody>
-                                        <tr class="gradeX">
+                                        <tr>
                                             <td>Tiger Nixon</td>
-                                            <td>Tiger@gmail.com</td>
-                                            <td>Edinburgh</td>
-                                            <td>100</td>
-                                            <td>5000</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeC">
+                                        <tr>
                                             <td>Garrett Winters</td>
-                                            <td>Garrett@gmail.com</td>
-                                            <td>Glasgow</td>
-                                            <td>1000</td>
-                                            <td>10000</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Inactive</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
+                                        <tr>
                                             <td>Ashton Cox</td>
-                                            <td>Ashton@gmail.com</td>
-                                            <td>Dublin</td>
-                                            <td>1000</td>
-                                            <td>50000</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
+                                        <tr>
                                             <td>Cedric Kelly</td>
-                                            <td>Cedric@gmail.com</td>
-                                            <td>Aucland</td>
-                                            <td>1020</td>
-                                            <td>50300</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
+                                        <tr>
                                             <td>Airi Satou</td>
-                                            <td>Airi@gmail.com</td>
-                                            <td>Sydney</td>
-                                            <td>1000</td>
-                                            <td>2000</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
+                                        <tr>
                                             <td>Brielle Williamson</td>
-                                            <td>Brielle@gmail.com</td>
-                                            <td>Perth</td>
-                                            <td>600</td>
-                                            <td>3000</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Inactive</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
+                                        <tr>
                                             <td>Herrod Chandler</td>
-                                            <td>Herrod@gmail.com</td>
-                                            <td>Melbourne</td>
-                                            <td>1000</td>
-                                            <td>50020</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Inactive</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
+                                        <tr>
                                             <td>Rhona Davidson</td>
-                                            <td>Rhona@gmail.com</td>
-                                            <td>Tokyo</td>
-                                            <td>10000</td>
-                                            <td>50400</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
+                                        <tr>
                                             <td>Colleen Hurst</td>
-                                            <td>Colleen@gmail.com</td>
-                                            <td>Seoul</td>
-                                            <td>5000</td>
-                                            <td>20000</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>500</td>
+                                            <td>Inactive</td>
+                                            <td>
+                                                <a href="edit_user.html" class="btn btn-success">Edit</a>
+                                                <a href="client_dashboard.html" class="btn btn-success">View</a></td>
                                         </tr>
-                                        <tr class="gradeA">
-                                            <td>Sonya Frost</td>
-                                            <td>Sonya@gmail.com</td>
-                                            <td>Taipei</td>
-                                            <td>1000</td>
-                                            <td>50020</td>
-                                            <td class="actions">
-                                                <!-- <a href="#" class="on-default edit-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                                <a href="#" class="on-default remove-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
-                                                <a href="#" class="hidden on-editing save-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save"><i class="fa fa-save"></i></a>
-                                                <a href="#" class="hidden on-editing cancel-row" data-toggle="tooltip" data-placement="top" title="" data-original-title="Cancel"><i class="fa fa-times"></i></a> -->
-                                                <a href="" class="btn btn-success btn-md">Edit</a>
-                                            </td>
-                                        </tr>
-                                       
+                                        
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <!-- end: page -->
-
-                        </div> <!-- end Panel -->
-
-
-
+                        </div>
+                        <!-- end row -->
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -459,31 +404,6 @@
         <!-- END wrapper -->
 
 
-        <!-- MODAL -->
-        <div id="dialog" class="modal-block mfp-hide">
-            <section class="card p-20">
-                <header class="panel-heading">
-                    <h4 class="panel-title mt-0">Are you sure?</h4>
-                </header>
-                <div class="panel-body">
-                    <div class="modal-wrapper">
-                        <div class="modal-text">
-                            <p>Are you sure that you want to delete this row?</p>
-                        </div>
-                    </div>
-
-                    <div class="row m-t-20">
-                        <div class="col-md-12 text-right">
-                            <button id="dialogConfirm" class="btn btn-success waves-effect waves-light">Confirm</button>
-                            <button id="dialogCancel" class="btn btn-danger waves-effect">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-        </div>
-        <!-- end Modal -->
-
 
         <script>
             var resizefunc = [];
@@ -502,23 +422,65 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
 
-        <!-- Examples -->
-        <script src="plugins/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+        <!-- Required datatable js -->
         <script src="plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="plugins/datatables/dataTables.bootstrap4.min.js"></script>
-        <script src="plugins/tiny-editable/mindmup-editabletable.js"></script>
-        <script src="plugins/tiny-editable/numeric-input-example.js"></script>
+        <!-- Buttons examples -->
+        <script src="plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="plugins/datatables/jszip.min.js"></script>
+        <script src="plugins/datatables/pdfmake.min.js"></script>
+        <script src="plugins/datatables/vfs_fonts.js"></script>
+        <script src="plugins/datatables/buttons.html5.min.js"></script>
+        <script src="plugins/datatables/buttons.print.min.js"></script>
+
+        <!-- Key Tables -->
+        <script src="plugins/datatables/dataTables.keyTable.min.js"></script>
+
+        <!-- Responsive examples -->
+        <script src="plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+        <!-- Selection table -->
+        <script src="plugins/datatables/dataTables.select.min.js"></script>
 
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 
-        <script src="assets/pages/datatables.editable.init.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
 
-        <script>
-            $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+                // Default Datatable
+                $('#datatable').DataTable();
+
+                //Buttons examples
+                var table = $('#datatable-buttons').DataTable({
+                    lengthChange: false,
+                    buttons: ['excel', 'pdf']
+                    // buttons: ['copy', 'excel', 'pdf']
+                });
+
+                // Key Tables
+
+                $('#key-table').DataTable({
+                    keys: true
+                });
+
+                // Responsive Datatable
+                $('#responsive-datatable').DataTable();
+
+                // Multi Selection Datatable
+                $('#selection-datatable').DataTable({
+                    select: {
+                        style: 'multi'
+                    }
+                });
+
+                table.buttons().container()
+                        .appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
+            } );
         </script>
-
 
     </body>
 </html>
